@@ -1,20 +1,16 @@
-%%writefile salary.py 
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-# emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Salaries in IT Dashboard", page_icon=":money_with_wings::", layout="wide")
 
 @st.cache
-# ---- READ EXCEL ----
 def get_data_from_excel():
-    df = pd.read_csv("/content/salary.csv")
+    df = pd.read_csv("salary.csv")
     return df
 
 df = get_data_from_excel()
 
-# ---- SIDEBAR ----
 st.sidebar.header("Please Filter Here:")
 
 experience_level = st.sidebar.multiselect(
