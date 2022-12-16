@@ -36,7 +36,7 @@ df_selection = df.query(
 )
 
 
-st.title(":bar_chart: Sales Dashboard")
+st.title(":bar_chart: Salary Dashboard")
 st.markdown("##")
 
 
